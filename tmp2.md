@@ -10,17 +10,17 @@
 flowchart LR
   %% ==== Outside the mesh ====
   client[Client]
-  lb[External L4 LB \(bare-metal or cloud\)]
+  lb[External L4 LB (bare-metal or cloud)]
 
   %% ==== Cluster A ====
   subgraph clusterA[Cluster A]
     direction LR
 
-    igw[Istio IngressGateway \(ns: sm-gateways\)]
+    igw[Istio IngressGateway (ns: sm-gateways)]
     svcA[Service A pod + Envoy sidecar]
     svcB[Service B pod + Envoy sidecar]
-    egw[Istio EgressGateway \(ns: sm-gateways\)]
-    ewA[Istio EastWestGateway A \(ns: sm-gateways\)]
+    egw[Istio EgressGateway (ns: sm-gateways)]
+    ewA[Istio EastWestGateway A (ns: sm-gateways)]
   end
 
   %% ==== Cluster B ====
@@ -28,7 +28,7 @@ flowchart LR
     direction LR
 
     svcB2[Service in Cluster B + Envoy sidecar]
-    ewB[Istio EastWestGateway B \(ns: sm-gateways\)]
+    ewB[Istio EastWestGateway B (ns: sm-gateways)]
   end
 
   ext[(External destination: SaaS / DB / API)]
