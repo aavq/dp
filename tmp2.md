@@ -10,7 +10,7 @@
 flowchart LR
   %% ==== Outside the mesh ====
   client[Client]
-  lb[External L4 LB (bare-metal or cloud)]
+  lb[External L4 LB ]
 
   %% ==== Cluster A ====
   subgraph clusterA[Cluster A]
